@@ -43,7 +43,6 @@
     "util": "^0.12.4"
   },
   "description": "git@github.com:Mmaxi1720/desafio-m6.git",
-  "main": "index.js",
   "repository": "git+https://github.com/Mmaxi1720/desafio-m6.git",
   "author": "<mmendez1720@gmail.com>",
   "bugs": {
