@@ -7,7 +7,7 @@
     "@vaadin/router": "^1.7.4",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
-    "express": "^4.17.3",
+    "express": "^4.18.0",
     "firebase": "^9.6.11",
     "firebase-admin": "^10.1.0",
     "nanoid": "^3.3.3",
@@ -41,5 +41,13 @@
     "stream-http": "^3.2.0",
     "url": "^0.11.0",
     "util": "^0.12.4"
-  }
+  },
+  "description": "git@github.com:Mmaxi1720/desafio-m6.git",
+  "main": "index.js",
+  "repository": "git+https://github.com/Mmaxi1720/desafio-m6.git",
+  "author": "<mmendez1720@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/Mmaxi1720/desafio-m6/issues"
+  },
+  "homepage": "https://github.com/Mmaxi1720/desafio-m6#readme"
 }
