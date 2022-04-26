@@ -59,7 +59,7 @@ class Timer extends HTMLElement {
       let valueContainer = div.querySelector(".value-container");
 
       let counter = 0;
-      let maxLimit = 3;
+      let maxLimit = 7;
       
 
       var variable = setInterval(() => {
