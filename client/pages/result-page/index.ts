@@ -9,8 +9,7 @@ class Result extends HTMLElement {
     }
     
     render(){
-        /* Agrego elementos */
-        const div = document.createElement("div")
+            const div = document.createElement("div")
         div.innerHTML=`
         <div class="container">
           <imagen-el class="invited-choice" computer type=${state.getState().onlineRoom.invitedplay}></imagen-el>
@@ -19,7 +18,7 @@ class Result extends HTMLElement {
           <imagen-el class="my-choice" myplay type=${state.getState().onlineRoom.ownerplay} ></imagen-el>
         </div>
     `;
-        /* Agrego CCS */
+      
     const style = document.createElement("style")
     style.textContent=
         `
@@ -41,8 +40,6 @@ class Result extends HTMLElement {
         `
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
-
-        /* Cronometro de 3 seg para ir al resultado */
         
         const invitedPlay = div.querySelector(".invited-choice").getAttribute("type")
         

@@ -80,12 +80,7 @@ app.get('/rooms/:roomid/:username', (req, res) => {
               res.send(newRoomDoc.id)
             });
           })
-          
-
-         /*  const roomRef = rtdb.ref("rooms/"+ nanoid())
-          roomRef.set({
-              messages: [],
-              owner: userId, */
+        
           app.post("/rooms/:roomid/:users", function (req, res) {
             const roomid = req.params.roomid
             const user = req.params.users

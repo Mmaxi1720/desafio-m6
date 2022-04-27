@@ -15,7 +15,7 @@ class Textcomp extends HTMLElement {
             font-family: 'Lora', serif;
             font-size: 60px;
             margin: 34px 34px;
-            color: #009048;
+            color: darkblue;
             font-weight: 700;
             text-align: center;
         }

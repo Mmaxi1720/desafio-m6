@@ -19,7 +19,6 @@ class Roompage extends HTMLElement {
         })
     }
     render(){
-        /* Agrego elementos */
         console.log(state.getState())
         const div = document.createElement("div")
         div.innerHTML=`
@@ -37,7 +36,6 @@ class Roompage extends HTMLElement {
                 </div>
         </div>
     `
-        /* Agrego CCS */
     const style = document.createElement("style")
     style.textContent=
         `
@@ -53,8 +51,6 @@ class Roompage extends HTMLElement {
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
 
-        /* Logica Para cuando ingresa el invitado cambie de pagina */
-        
         if(state.getState().onlineRoom.invitedonline == true){
             const roomid = state.getState().rooms.id
             state.invitedOff(roomid).then(()=>{

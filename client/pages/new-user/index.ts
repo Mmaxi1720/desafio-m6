@@ -5,13 +5,11 @@ class NewUser extends HTMLElement {
       super(); 
       this.render()
     }
-    /* Funcion para darle un numero entre 1000 - 9999 a la sala */
     getRandomNumber(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
     
     render(){
-        /* Agrego elementos */
         const shadow = this.attachShadow({mode: 'open'});
         shadow.innerHTML=`
         <div class="container">
@@ -24,8 +22,7 @@ class NewUser extends HTMLElement {
             </div>
         </div>
         `
-        /* Agrego CCS */
-        const style = document.createElement("style")
+            const style = document.createElement("style")
         style.textContent=
         `
         .container{
@@ -38,8 +35,6 @@ class NewUser extends HTMLElement {
         }
         `
         shadow.appendChild(style)
-
-        /* Logica del boton */
         const buttonEl = shadow.getElementById("button")
         const formShadowEL =buttonEl.shadowRoot.getElementById("form")
         const inputShadowEL =buttonEl.shadowRoot.querySelector("input")
@@ -47,9 +42,7 @@ class NewUser extends HTMLElement {
             e.preventDefault()
             const nuevoNombre = inputShadowEL.value
             const randomNumber = this.getRandomNumber(1000,9999)
-            /* Primero creo el usuariio */
             state.setUser(nuevoNombre)
-            /* Despues creo la room y voy a room-page */
             .then(()=>{
                 const user = state.getState().users.nombre
                 state.createNewRoom(randomNumber, user).then(()=>{

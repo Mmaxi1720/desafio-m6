@@ -59,7 +59,7 @@ class Timer extends HTMLElement {
       let valueContainer = div.querySelector(".value-container");
 
       let counter = 0;
-      let maxLimit = 7;
+      let maxLimit = 5;
       
 
       var variable = setInterval(() => {
@@ -67,8 +67,8 @@ class Timer extends HTMLElement {
         valueContainer.textContent = `${counter}`;
         progressBar.style.background = `
         conic-gradient(
-          #4d5bf9 ${counter * 120}deg,
-          #cadcff ${counter * 120}deg
+          #4d5bf9 ${counter * 300}deg,
+          #cadcff ${counter * 300}deg
         )`;
         if (counter >= maxLimit) {
                      

@@ -4,8 +4,6 @@ class Button extends HTMLElement {
       this.render();
     }
     render(){
-
-      /* Este custom EL puede ser solo un boton o un boton con input y label. Genero if para segun el type que tenga genere uno o el otro */  
       const shadow = this.attachShadow({ mode: "open"});
       
       if (this.getAttribute("type")== "button") {

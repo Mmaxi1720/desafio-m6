@@ -72,10 +72,6 @@ app.post("/rooms", function (req, res) {
         res.send(newRoomDoc.id);
     });
 });
-/*  const roomRef = rtdb.ref("rooms/"+ nanoid())
- roomRef.set({
-     messages: [],
-     owner: userId, */
 app.post("/rooms/:roomid/:users", function (req, res) {
     var _a;
     var roomid = req.params.roomid;

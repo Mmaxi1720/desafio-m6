@@ -1,7 +1,6 @@
 import {rtdb} from "./db"
 import { getDatabase, ref, onValue, set} from "firebase/database";
 
-/* TIPADOS */
 type User = {
   nombre:string
   id:string
@@ -28,7 +27,6 @@ type Game = {
 };
 
 type Result = "win" | "lose";
-/* URL, RLTB y STATE */
 
 const API_BASE_URL = "http://localhost:3002"
 
@@ -49,8 +47,6 @@ export const state = {
     },
   },
   listeners: [],
-
-/* FUNCIONES */
 
   getState() {
     return this.data

@@ -8,20 +8,16 @@ class Waiting extends HTMLElement {
       this.render()
       state.subscribe(()=>{
         this.render()
-        
-
     })
     }
     
     render(){
-        /* Agrego elementos */
-        
         const div = document.createElement("div")
         div.innerHTML=`
         <div class="container">
                 <header-comp owner-name = "${state.getState().onlineRoom.owner}">${state.getState().onlineRoom.invited}</header-comp>
             
-                <text-comp variant = "paragraph">Esperando a que ${state.getState().onlineRoom.invited} le de a "jugar".</text-comp>
+                <text-comp variant = "paragraph">Esperando a tu rival..".</text-comp>
                 
                 <div class="container-images">
                     <imagen-el type = "piedra"></imagen-el>
@@ -30,7 +26,6 @@ class Waiting extends HTMLElement {
                 </div>
         </div>
     `
-        /* Agrego CCS */
     const style = document.createElement("style")
     style.textContent=
         `
@@ -45,8 +40,6 @@ class Waiting extends HTMLElement {
         `
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
-
-        /* Logica del boton */
         const currentGame = state.getState().onlineRoom
         const roomId = state.getState().rooms.id
         if(currentGame.ownerready && currentGame.invitedready == true){

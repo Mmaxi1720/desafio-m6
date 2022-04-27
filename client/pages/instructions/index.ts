@@ -9,7 +9,6 @@ class Instructions extends HTMLElement {
     }
     
     render(){
-        /* Agrego elementos */
         const user = state.getState().users.nombre
         const currentState = state.getState().onlineRoom.owner
         console.log(user, currentState)
@@ -26,7 +25,7 @@ class Instructions extends HTMLElement {
                 <header-comp owner-name = "${state.getState().onlineRoom.owner}">${invitedName}</header-comp>
             
                 <text-comp variant = "paragraph">Presioná jugar
-                y elegí: piedra, papel o tijera antes de que pasen los 3 segundos, sino se eligirá automaticamente de forma aleatoria, asique ¡apuraté!.</text-comp>
+                y elegí: piedra, papel o tijera antes de que pasen los segundos, sino se eligirá automaticamente de forma aleatoria.</text-comp>
                 <button-el type="button" button="¡Jugar!" id="button-jugar"></button-el>
                 
                 <div class="container-images">
@@ -36,7 +35,7 @@ class Instructions extends HTMLElement {
                 </div>
         </div>
     `
-        /* Agrego CCS */
+    
     const style = document.createElement("style")
     style.textContent=
         `

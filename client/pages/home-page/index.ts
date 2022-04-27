@@ -7,11 +7,10 @@ class Homepage extends HTMLElement {
     
     
     render(){
-        /* Agrego elementos */
         const shadow = this.attachShadow({mode: 'open'});
         shadow.innerHTML=`
         <div class="container">
-            <text-comp variant = "title">Piedra, Papel o Tijera.</text-comp>
+            <text-comp variant = "title">Piedra, Papel o Tijera</text-comp>
             
             <button-el type="button" button="Nueva partida" id="button-nueva-partida"></button-el>
             <button-el type="button" button="Ingresar a una sala" id="button">Ingresar a una sala</button-el>
@@ -23,7 +22,7 @@ class Homepage extends HTMLElement {
             </div>
         </div>
     `
-        /* Agrego CCS */
+        
     const style = document.createElement("style")
     style.textContent=
         `
@@ -32,13 +31,12 @@ class Homepage extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            height: 782px;
+            height: 700px;
             
         }
         `
         shadow.appendChild(style)
 
-        /* Logica de los botones */
         const buttonNuevaPartidaEl = shadow.getElementById("button-nueva-partida")
         buttonNuevaPartidaEl.addEventListener("click", ()=>{
             Router.go("new-game")

@@ -26,7 +26,7 @@ class Playwaiting extends HTMLElement {
                 </div>
         </div>
     `
-        /* Agrego CCS */
+    
     const style = document.createElement("style")
     style.textContent=
         `
@@ -41,9 +41,6 @@ class Playwaiting extends HTMLElement {
         `
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
-
-        /* Logica del boton */
-       
         setTimeout(() => {
             Router.go("results-page")
         }, 3000)

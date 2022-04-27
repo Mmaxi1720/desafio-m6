@@ -1,5 +1,4 @@
 import { Router } from "@vaadin/router";
-import { stat } from "fs";
 import { state } from "../../state";
 class SalaCode extends HTMLElement {
     constructor() {
@@ -9,7 +8,7 @@ class SalaCode extends HTMLElement {
     
     
     render(){
-        /* Agrego elementos */
+        
         const shadow = this.attachShadow({mode: 'open'});
         shadow.innerHTML=`
         <div class="container">
@@ -23,7 +22,6 @@ class SalaCode extends HTMLElement {
         
         </div>
     `
-        /* Agrego CCS */
     const style = document.createElement("style")
     style.textContent=
         `
@@ -37,8 +35,6 @@ class SalaCode extends HTMLElement {
         }
         `
         shadow.appendChild(style)
-
-        /* Logica del boton */
         const buttonEl = shadow.getElementById("button")
         const formShadowEL =buttonEl.shadowRoot.getElementById("form")
         const inputRoomShadowEL = <HTMLInputElement>buttonEl.shadowRoot.querySelector(".input")

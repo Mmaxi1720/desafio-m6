@@ -37,8 +37,6 @@ class Gamepage extends HTMLElement {
     return Math.floor(Math.random() * (max - min)) + min;
   }
   render() {
-    /* Agrego elementos */
-
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="container">
@@ -50,7 +48,6 @@ class Gamepage extends HTMLElement {
             </div>
         </div>
         `;
-    /* Agrego CCS */
     const style = document.createElement("style");
     style.textContent = `
         .container{
@@ -58,16 +55,13 @@ class Gamepage extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            height: 782px;
+            height: 600px;
             
         }
         `;
     this.shadow.appendChild(div);
     this.shadow.appendChild(style);
 
-    /* Logica de la eleccion de la jugada */
-
-    
     const imagenEls = this.shadow.querySelectorAll(".play");
     imagenEls.forEach((ev) => {
       ev.addEventListener("click", (e) => {

@@ -9,7 +9,6 @@ class Imagen extends HTMLElement {
             this.render()
         }
         render(){
-            /* Agrego imagenes a cada componente */
             const shadow = this.attachShadow({mode: 'open'});
             const div = document.createElement("img")
             div.classList.add("type")
@@ -25,8 +24,6 @@ class Imagen extends HTMLElement {
 
             shadow.appendChild(div)
 
-            /* Agrego opacidad para la page "jugada" */
-            
             const attribute = this.hasAttribute("class")
             const style = document.createElement("style");
 

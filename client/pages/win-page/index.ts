@@ -8,8 +8,6 @@ class Winpage extends HTMLElement {
       this.render()
     }
     render(){
-        /* Agrego elementos */
-        
         const ganasteResultURL = require("url:../../images/Star1.png");
         const div = document.createElement("div")
         div.innerHTML=`
@@ -22,7 +20,6 @@ class Winpage extends HTMLElement {
             <button-el type="button" button="Volver a Jugar" id="button-volver-a-jugar"></button-el>
         </div>
         `
-        /* Agrego CCS */
     const style = document.createElement("style")
     style.textContent=
         `
@@ -31,14 +28,12 @@ class Winpage extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            height: 782px;
+            height: 650px;
             
         }
         `
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
-
-        /* Logica del boton */
         const buttonNuevaPartidaEl = this.shadow.getElementById("button-volver-a-jugar")
         buttonNuevaPartidaEl.addEventListener("click", ()=>{
             
