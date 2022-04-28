@@ -30,9 +30,14 @@ class NewUser extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            height: 782px;
+            height: 780px;
+            }
             
-        }
+        @media(max-width:375px){ 
+            .container{
+                height: 600px
+            }
+            }
         `
         shadow.appendChild(style)
         const buttonEl = shadow.getElementById("button")

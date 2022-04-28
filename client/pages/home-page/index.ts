@@ -32,8 +32,8 @@ class Homepage extends HTMLElement {
             align-items: center;
             flex-direction: column;
             height: 700px;
-            
         }
+        
         `
         shadow.appendChild(style)
 

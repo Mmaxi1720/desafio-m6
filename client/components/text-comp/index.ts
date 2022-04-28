@@ -18,7 +18,12 @@ class Textcomp extends HTMLElement {
             color: darkblue;
             font-weight: 700;
             text-align: center;
-        }
+        }        
+        @media(max-width:375px){
+          .title{
+              font-size: 45px;
+          }
+          }
         .paragraph{
             font-size: 30px;
             font-family: 'Lora', serif;

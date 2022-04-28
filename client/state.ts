@@ -28,7 +28,7 @@ type Game = {
 
 type Result = "win" | "lose";
 
-const API_BASE_URL = "http://localhost:3002"
+/* const API_BASE_URL = "http://localhost:3002" */
 
 const realTimedb = getDatabase(rtdb)
 

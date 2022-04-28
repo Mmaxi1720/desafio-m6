@@ -91,6 +91,13 @@ class Button extends HTMLElement {
           font-family: 'Odibee Sans', cursive;
           font-size: 20px;
         }
+        
+        @media(min-width:376px){ 
+        .label{
+          font-family: 'Odibee Sans', cursive;
+          font-size: 40px;
+          }
+          }
       `
         shadow.appendChild(style)
     }
