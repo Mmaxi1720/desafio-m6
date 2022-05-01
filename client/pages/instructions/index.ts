@@ -10,7 +10,7 @@ class Instructions extends HTMLElement {
     
     render(){
         const user = state.getState().users.nombre
-        const currentState = state.getState().onlineRoom.user
+        const currentState = state.getState().onlineRoom.owner
         console.log(user, currentState)
         
          if(user == currentState){
