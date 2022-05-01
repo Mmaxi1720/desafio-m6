@@ -10,11 +10,11 @@ class Instructions extends HTMLElement {
     
     render(){
         const user = state.getState().users.nombre
-        const currentState = state.getState().onlineRoom.owner
+        const currentState = state.getState().onlineRoom
         console.log(user, currentState)
         
          if(user == currentState){
-            var invitedName = state.getState().onlineRoom.invited
+            var invitedName = state.getState().onlineRoom
         }else{
             var invitedName = user
         }
@@ -50,9 +50,7 @@ class Instructions extends HTMLElement {
         `
         this.shadow.appendChild(div)
         this.shadow.appendChild(style)
-
-        /* Logica del boton */
-       
+    
         const buttonNuevaPartidaEl = this.shadow.getElementById("button-jugar")
         buttonNuevaPartidaEl.addEventListener("click", ()=>{
             const user = state.getState().users.nombre
