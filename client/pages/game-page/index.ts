@@ -58,11 +58,9 @@ class Gamepage extends HTMLElement {
           state.setMove("tijera", this.username, this.roomid).then(() => {
             Router.go("waiting-play");
           });
-        } else{
-          Router.go("/instructions")
         }
       })
-    },1000) 
+    }) 
   }
 }
 customElements.define("game-comp", Gamepage);
