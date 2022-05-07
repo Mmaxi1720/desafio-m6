@@ -11,32 +11,8 @@ class Gamepage extends HTMLElement {
     this.username = state.getState().users.nombre;
     this.roomid = state.getState().rooms.id;
     this.render();
-    this.timer = setTimeout(() => {
-      const number = this.getRandomNumber(1, 3)
-      console.log("soy settime")
-      if(number == 1 ){
-          state.setMove("piedra",this.username, this.roomid).then(()=>{
-          
-              Router.go("waiting-play")
-          })
-      }else if(number == 2){
-          state.setMove("papel",this.username, this.roomid).then(()=>{
-          
-              Router.go("waiting-play")
-          });;
-      }else if(number == 3){
-          state.setMove("tijera",this.username, this.roomid).then(()=>{
-          
-              Router.go("waiting-play")
-          });;
-      }
-   }
-    , 3500);
   }
-  getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-  render() {
+    render() {
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="container">
@@ -61,7 +37,7 @@ class Gamepage extends HTMLElement {
         `;
     this.shadow.appendChild(div);
     this.shadow.appendChild(style);
-
+    
     const imagenEls = this.shadow.querySelectorAll(".play");
     imagenEls.forEach((ev) => {
       ev.addEventListener("click", (e) => {
@@ -72,22 +48,21 @@ class Gamepage extends HTMLElement {
           state.setMove("piedra", this.username, this.roomid).then(() => {
             Router.go("waiting-play");
           });
-        } else if (move == "papel") {
+        } if (move == "papel") {
           clearTimeout(this.timer)
           state.setMove("papel", this.username, this.roomid).then(() => {
             Router.go("waiting-play");
           });
-        } else {
+        }  if(move == "tijera"){
           clearTimeout(this.timer)
           state.setMove("tijera", this.username, this.roomid).then(() => {
             Router.go("waiting-play");
           });
+        } else{
+          Router.go("/instructions")
         }
-      });
-    });
-  }
-  randomPlay(){
-      this.timer
+      })
+    },1000) 
   }
 }
 customElements.define("game-comp", Gamepage);

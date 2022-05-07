@@ -12,7 +12,7 @@ class Roompage extends HTMLElement {
     connectedCallback(){
         state.subscribe(()=>{
             if(state.getState().onlineRoom.invitedonline == false){
-               const nada = "no hago nada"
+               
             }else if(state.getState().onlineRoom.invitedonline == true){
                 this.render()
             }
