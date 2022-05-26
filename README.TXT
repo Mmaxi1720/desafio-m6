@@ -1,9 +1,10 @@
-git@github.com:Mmaxi1720/desafio-m6.git
 
-//Postman//
+PIEDRA PAPEL O TIJERA - ONLINE (2 PLAYERS)
+
+
+//Doc API en Postman//
 https://documenter.getpostman.com/view/20245171/UyrEiFT6
 
 
-//Heroku//
-
+//Link acceso web en Heroku//
 https://mm-desafiom6.herokuapp.com/
